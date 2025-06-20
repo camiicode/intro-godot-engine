@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxehttqct1e7j"]
+
+[ext_resource type="PackedScene" uid="uid://ctivlgabfsml0" path="res://map/petri-dish-map.tscn" id="1_jirdo"]
+[ext_resource type="PackedScene" uid="uid://dw20djgrnqt3t" path="res://characters/cell-stage-1.tscn" id="2_bt44k"]
+
+[sub_resource type="GDScript" id="GDScript_jirdo"]
+resource_name = "add-lipid"
+script/source = "func _on_button_pressed():
+	var nutrient = preload(\"res://Nutrient.tscn\").instantiate()
+	nutrient.global_position = Vector2(randi() % 500, randi() % 500) # posición aleatoria
+	nutrient.target = $Player # o el nodo correcto
+	add_child(nutrient)
+"
+
+[node name="level-1" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_jirdo")]
+position = Vector2(549, 338)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_bt44k")]
+position = Vector2(521, 424)
+
+[node name="add-lipid" type="Button" parent="."]
+offset_left = 913.0
+offset_top = 322.0
+offset_right = 1053.0
+offset_bottom = 353.0
+text = "LIPIDOS"
+script = SubResource("GDScript_jirdo")
