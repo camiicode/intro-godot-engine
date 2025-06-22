@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv4fw18bw5pbr"
-path="res://.godot/imported/lipid.png-bf218c9b5d00fa05e6232db21bf1c8d5.ctex"
+uid="uid://cp72vptuoqnsa"
+path="res://.godot/imported/lipid-button.png-b36e50fc45db75b5db99bda49cfd10b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/boosts/lipid.png"
-dest_files=["res://.godot/imported/lipid.png-bf218c9b5d00fa05e6232db21bf1c8d5.ctex"]
+source_file="res://assets/sprites/boosts/lipid-button.png"
+dest_files=["res://.godot/imported/lipid-button.png-b36e50fc45db75b5db99bda49cfd10b4.ctex"]
 
 [params]
 

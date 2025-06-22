@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bghmrin4gqvlo"]
+
+[ext_resource type="Texture2D" uid="uid://cv4fw18bw5pbr" path="res://assets/sprites/boosts/lipid.png" id="1_ug2yj"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_ug2yj")
