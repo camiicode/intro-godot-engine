@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxcgypbbllu17"]
-
-[ext_resource type="Texture2D" uid="uid://cp72vptuoqnsa" path="res://assets/sprites/boosts/lipid-button.png" id="1_lvhf2"]
-[ext_resource type="Script" uid="uid://c1eqqb14vufc" path="res://buttons/btn_add_lipid.gd" id="2_bjnj4"]
-
-[node name="Sprite2D" type="Sprite2D"]
-texture = ExtResource("1_lvhf2")
-script = ExtResource("2_bjnj4")

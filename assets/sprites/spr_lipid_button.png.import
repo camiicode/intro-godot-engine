@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cke2ihvbvxkir"
-path="res://.godot/imported/petri-dish.png-6cdf9efb417e9e1f17917d02b7430df8.ctex"
+uid="uid://cp72vptuoqnsa"
+path="res://.godot/imported/spr_lipid_button.png-1e0853197cce5b7750cadb3867c172a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/map/petri-dish.png"
-dest_files=["res://.godot/imported/petri-dish.png-6cdf9efb417e9e1f17917d02b7430df8.ctex"]
+source_file="res://assets/sprites/spr_lipid_button.png"
+dest_files=["res://.godot/imported/spr_lipid_button.png-1e0853197cce5b7750cadb3867c172a1.ctex"]
 
 [params]
 

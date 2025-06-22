@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3ajw0i672ujo"]
+
+[ext_resource type="Texture2D" uid="uid://cv4fw18bw5pbr" path="res://assets/sprites/spr_lipid.png" id="1_50fib"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_50fib")

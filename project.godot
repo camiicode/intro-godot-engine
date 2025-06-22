@@ -13,7 +13,13 @@ config_version=5
 config/name="intro-godot-engine"
 run/main_scene="uid://cxehttqct1e7j"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icons/icon.svg"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
 
 [rendering]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5uhe6xdra0b0"
-path="res://.godot/imported/microscope-interface.png-d0cd8c3786c5bafc0ea204d574f1138d.ctex"
+uid="uid://cv4fw18bw5pbr"
+path="res://.godot/imported/spr_lipid.png-1cf3d3f1eed46b2eea44570cbffb8ddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/map/microscope-interface.png"
-dest_files=["res://.godot/imported/microscope-interface.png-d0cd8c3786c5bafc0ea204d574f1138d.ctex"]
+source_file="res://assets/sprites/spr_lipid.png"
+dest_files=["res://.godot/imported/spr_lipid.png-1cf3d3f1eed46b2eea44570cbffb8ddd.ctex"]
 
 [params]
 

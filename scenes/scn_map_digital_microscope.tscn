@@ -1,15 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://c68cgljkqc6p7"]
 
-[ext_resource type="Texture2D" uid="uid://c5uhe6xdra0b0" path="res://assets/sprites/map/microscope-interface.png" id="1_2o02q"]
+[ext_resource type="Texture2D" uid="uid://c5uhe6xdra0b0" path="res://assets/ui/spr_microscope-interface.png" id="1_2o02q"]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
-[node name="Microscope-interface" type="Sprite2D" parent="."]
-position = Vector2(252, -5)
-scale = Vector2(0.59962, 0.597685)
+[node name="spr_microscope-interface_png" type="Sprite2D" parent="."]
+position = Vector2(361, -2.99997)
+scale = Vector2(0.833333, 0.833333)
 texture = ExtResource("1_2o02q")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(11.8075, 6.1179)
+scale = Vector2(1.3851, 1.3851)
 build_mode = 1
 polygon = PackedVector2Array(-247, 0, -247, -20, -243, -53, -234, -85, -219, -120, -190, -163, -164, -191, -117, -223, -63, -244, -1, -253, 70, -243, 122, -219, 168, -188, 210, -139, 235, -80, 246, -34, 248, 0, 242, 51, 226, 95, 200, 137, 171, 174, 136, 202, 107, 216, 72, 230, 41, 238, -1, 242, -59, 235, -110, 216, -159, 184, -197, 144, -226, 98, -244, 45)
 one_way_collision = true

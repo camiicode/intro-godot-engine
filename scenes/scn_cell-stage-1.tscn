@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw20djgrnqt3t"]
 
-[ext_resource type="Texture2D" uid="uid://cybnghog36vbm" path="res://assets/sprites/characters/cell-stage-1.png" id="1_isbnh"]
-[ext_resource type="Script" uid="uid://xtq1vimtm4ua" path="res://characters/cell_stage_1.gd" id="1_o1o6x"]
+[ext_resource type="Texture2D" uid="uid://cybnghog36vbm" path="res://assets/sprites/spr_cell-stage-1.png" id="1_isbnh"]
+[ext_resource type="Script" uid="uid://xtq1vimtm4ua" path="res://scripts/scr_cell_stage_1.gd" id="1_o1o6x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o1o6x"]
 radius = 22.0

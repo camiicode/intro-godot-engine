@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxcgypbbllu17"]
+
+[ext_resource type="Texture2D" uid="uid://cp72vptuoqnsa" path="res://assets/sprites/spr_lipid_button.png" id="1_lvhf2"]
+[ext_resource type="Script" uid="uid://c1eqqb14vufc" path="res://scripts/scr_btn_add_lipid.gd" id="2_bjnj4"]
+[ext_resource type="PackedScene" uid="uid://c3ajw0i672ujo" path="res://scenes/scn_lipid.tscn" id="3_2sg46"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_lvhf2")
+script = ExtResource("2_bjnj4")
+lipid_scene = ExtResource("3_2sg46")

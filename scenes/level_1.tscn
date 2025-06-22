@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxehttqct1e7j"]
+
+[ext_resource type="PackedScene" uid="uid://dw20djgrnqt3t" path="res://scenes/scn_cell-stage-1.tscn" id="1_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://c68cgljkqc6p7" path="res://scenes/scn_map_digital_microscope.tscn" id="2_4nkto"]
+[ext_resource type="PackedScene" uid="uid://bxcgypbbllu17" path="res://scenes/scn_btn_add_lipid.tscn" id="3_fcfvj"]
+
+[node name="level-1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_5xbjy")]
+z_index = 1
+position = Vector2(374, 329)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_4nkto")]
+position = Vector2(439, 453)
+
+[node name="Sprite2D" parent="." instance=ExtResource("3_fcfvj")]
+position = Vector2(1029, 240)
