@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxehttqct1e7j"]
+[gd_scene load_steps=5 format=3 uid="uid://cxehttqct1e7j"]
 
 [ext_resource type="PackedScene" uid="uid://dw20djgrnqt3t" path="res://scenes/scn_cell-stage-1.tscn" id="1_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://c68cgljkqc6p7" path="res://scenes/scn_map_digital_microscope.tscn" id="2_4nkto"]
-[ext_resource type="PackedScene" uid="uid://bxcgypbbllu17" path="res://scenes/scn_btn_add_lipid.tscn" id="3_fcfvj"]
+[ext_resource type="Script" uid="uid://c1eqqb14vufc" path="res://scripts/scr_btn_add_lipid.gd" id="3_rus8k"]
+[ext_resource type="PackedScene" uid="uid://bkyru1ttjyxnb" path="res://scenes/scn_lipid.tscn" id="4_5xbjy"]
 
 [node name="level-1" type="Node2D"]
 
@@ -13,5 +14,48 @@ position = Vector2(374, 329)
 [node name="StaticBody2D" parent="." instance=ExtResource("2_4nkto")]
 position = Vector2(439, 453)
 
-[node name="Sprite2D" parent="." instance=ExtResource("3_fcfvj")]
-position = Vector2(1029, 240)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 928.0
+offset_top = 128.0
+offset_right = 1280.0
+offset_bottom = 256.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/GridContainer" node_paths=PackedStringArray("cell_node")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_rus8k")
+lipid_scene = ExtResource("4_5xbjy")
+cell_node = NodePath("../../../../CharacterBody2D")
+
+[node name="Button2" type="Button" parent="CanvasLayer/PanelContainer/GridContainer" node_paths=PackedStringArray("cell_node")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_rus8k")
+lipid_scene = ExtResource("4_5xbjy")
+cell_node = NodePath("../../../../CharacterBody2D")
+
+[node name="Button3" type="Button" parent="CanvasLayer/PanelContainer/GridContainer" node_paths=PackedStringArray("cell_node")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_rus8k")
+lipid_scene = ExtResource("4_5xbjy")
+cell_node = NodePath("../../../../CharacterBody2D")
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Button" to="CanvasLayer/PanelContainer/GridContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Button2" to="CanvasLayer/PanelContainer/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Button3" to="CanvasLayer/PanelContainer/GridContainer/Button3" method="_on_pressed"]

@@ -25,3 +25,9 @@ func get_random_direction() -> Vector2:
 		randf_range(-1, 1),
 		randf_range(-1, 1)
 	).normalized() * randf_range(min_force, max_force)
+
+var lipid_percentage = 0.0
+
+func add_lipid(amount):
+	lipid_percentage += amount
+	print("Porcentaje de lípidos actual:", lipid_percentage, "%")

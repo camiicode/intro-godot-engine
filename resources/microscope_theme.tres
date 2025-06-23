@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bb401fnv6ejl1"]
+
+[ext_resource type="Texture2D" uid="uid://cp72vptuoqnsa" path="res://assets/sprites/spr_lipid_button.png" id="1_egpw7"]
+[ext_resource type="Texture2D" uid="uid://b4b0adin6esgy" path="res://assets/sprites/spr_lipid_button__hover.png" id="1_qdoaq"]
+[ext_resource type="FontFile" uid="uid://dsf50b4yxe8c8" path="res://assets/fonts/Poppins-Bold.ttf" id="1_x58qx"]
+[ext_resource type="Texture2D" uid="uid://cm7qt6s46xu2y" path="res://assets/sprites/spr_lipid_button__press.png" id="3_cpbt6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdoaq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xt4j"]
+texture = ExtResource("1_qdoaq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qo2en"]
+texture = ExtResource("1_egpw7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekvo3"]
+texture = ExtResource("3_cpbt6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdoaq"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxFlat_qdoaq")
+Button/styles/hover = SubResource("StyleBoxTexture_4xt4j")
+Button/styles/normal = SubResource("StyleBoxTexture_qo2en")
+Button/styles/pressed = SubResource("StyleBoxTexture_ekvo3")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_x58qx")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_qdoaq")

@@ -1,28 +1,32 @@
-extends Sprite2D
+extends Button
 
 @export var lipid_scene: PackedScene  # Asignas scn_lipid.tscn desde el editor
+@export var cell_node: Node2D  # Asignás la célula desde el editor
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_rect().has_point(to_local(event.position)):
-			print("clicked")
+func _on_pressed() -> void:
+	print("Botón de lípido presionado")
 
-			var microscope_area = get_node("../StaticBody2D/CollisionPolygon2D")
+	var microscope_area = get_node("/root/level-1/StaticBody2D/CollisionPolygon2D")
+	
+	if microscope_area == null:
+		push_error("No se encontró el CollisionPolygon2D")
+		return
 
-			if microscope_area == null:
-				push_error("No se encontró el CollisionPolygon2D")
-				return
+	var polygon = microscope_area.polygon
+	var microscope_offset = microscope_area.global_position
 
-			var polygon = microscope_area.polygon
-			var microscope_offset = microscope_area.global_position  # ← Renombrado aquí
+	var spawn_pos = get_random_point_inside_polygon(polygon, microscope_offset)
 
-			var spawn_pos = get_random_point_inside_polygon(polygon, microscope_offset)
+	var lipid = lipid_scene.instantiate() as Area2D
 
-			var lipid = lipid_scene.instantiate()
-			lipid.position = spawn_pos
+	if lipid == null:
+		push_error("Error: lipid_scene no está asignada o no se pudo instanciar.")
+		return
 
-			# Idealmente lo agregas al padre común de los nodos de juego, no directamente al root:
-			get_tree().current_scene.add_child(lipid)
+	lipid.position = spawn_pos
+	lipid.target_cell = cell_node
+	get_tree().current_scene.add_child(lipid)
+
 
 func get_random_point_inside_polygon(polygon: PackedVector2Array, offset_position: Vector2) -> Vector2:
 	var min_x = INF
@@ -54,3 +58,5 @@ func get_random_point_inside_polygon(polygon: PackedVector2Array, offset_positio
 
 	# Si no encontró uno válido después de 1000 intentos, da el centro
 	return Vector2((min_x + max_x) / 2, (min_y + max_y) / 2) + offset_position
+
+	
