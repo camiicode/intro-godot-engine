@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var target_cell: Node2D
+@export var material_type: String = "lipid"
 var speed = 30
 var absorbed = false
 var absorbing = false  # ← Nuevo estado
@@ -21,6 +22,6 @@ func _process(delta):
 			queue_free()
 
 func inform_cell():
-	if target_cell and target_cell.has_method("add_lipid"):
+	if target_cell and target_cell.has_method("add_ingredient"):
 		var percentage = randf_range(0.25, 1.0)
-		target_cell.add_lipid(percentage)
+		target_cell.add_ingredient(material_type, percentage)

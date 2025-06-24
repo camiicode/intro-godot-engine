@@ -1,6 +1,6 @@
 extends Button
 
-@export var lipid_scene: PackedScene  # Asignas scn_lipid.tscn desde el editor
+@export var ingredient_scene: PackedScene  # Asignas scn_lipid.tscn desde el editor
 @export var cell_node: Node2D  # Asignás la célula desde el editor
 
 func _on_pressed() -> void:
@@ -17,15 +17,15 @@ func _on_pressed() -> void:
 
 	var spawn_pos = get_random_point_inside_polygon(polygon, microscope_offset)
 
-	var lipid = lipid_scene.instantiate() as Area2D
+	var ingredient = ingredient_scene.instantiate()
+	ingredient.material_type = "protein" # Aqui se especifica que material se le va agregar
+	ingredient.target_cell = cell_node
+	ingredient.position = spawn_pos
+	get_tree().current_scene.add_child(ingredient)
 
-	if lipid == null:
-		push_error("Error: lipid_scene no está asignada o no se pudo instanciar.")
-		return
-
-	lipid.position = spawn_pos
-	lipid.target_cell = cell_node
-	get_tree().current_scene.add_child(lipid)
+	ingredient.position = spawn_pos
+	ingredient.target_cell = cell_node
+	get_tree().current_scene.add_child(ingredient)
 
 
 func get_random_point_inside_polygon(polygon: PackedVector2Array, offset_position: Vector2) -> Vector2:
@@ -58,5 +58,3 @@ func get_random_point_inside_polygon(polygon: PackedVector2Array, offset_positio
 
 	# Si no encontró uno válido después de 1000 intentos, da el centro
 	return Vector2((min_x + max_x) / 2, (min_y + max_y) / 2) + offset_position
-
-	

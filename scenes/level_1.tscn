@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dw20djgrnqt3t" path="res://scenes/scn_cell-stage-1.tscn" id="1_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://c68cgljkqc6p7" path="res://scenes/scn_map_digital_microscope.tscn" id="2_4nkto"]
-[ext_resource type="Script" uid="uid://c1eqqb14vufc" path="res://scripts/scr_btn_add_lipid.gd" id="3_rus8k"]
-[ext_resource type="PackedScene" uid="uid://bkyru1ttjyxnb" path="res://scenes/scn_lipid.tscn" id="4_5xbjy"]
+[ext_resource type="Script" uid="uid://c1eqqb14vufc" path="res://scripts/scr_btn_add_ingredient.gd" id="3_rus8k"]
+[ext_resource type="PackedScene" path="res://scenes/scn_lipid.tscn" id="4_5xbjy"]
 
 [node name="level-1" type="Node2D"]
 
